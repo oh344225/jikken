@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A785F6F1DA4186400B53898 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A785F6E1DA4186400B53898 /* ExternalAccessory.framework */; };
 		4AF6109D1D9A947C00143E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6109C1D9A947C00143E11 /* AppDelegate.swift */; };
 		4AF6109F1D9A947C00143E11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6109E1D9A947C00143E11 /* ViewController.swift */; };
 		4AF610A21D9A947C00143E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF610A01D9A947C00143E11 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		4AF610A71D9A947C00143E11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF610A51D9A947C00143E11 /* LaunchScreen.storyboard */; };
 		4AF610B21D9A947D00143E11 /* ble_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF610B11D9A947D00143E11 /* ble_testTests.swift */; };
 		4AF610BD1D9A947D00143E11 /* ble_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF610BC1D9A947D00143E11 /* ble_testUITests.swift */; };
+		4AF610CB1D9A94C000143E11 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF610CA1D9A94C000143E11 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A785F6E1DA4186400B53898 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		4A785F701DA4186400B53898 /* ble test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ble test.entitlements"; sourceTree = "<group>"; };
 		4AF610991D9A947C00143E11 /* ble test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ble test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF6109C1D9A947C00143E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF6109E1D9A947C00143E11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 		4AF610B81D9A947D00143E11 /* ble testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ble testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF610BC1D9A947D00143E11 /* ble_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ble_testUITests.swift; sourceTree = "<group>"; };
 		4AF610BE1D9A947D00143E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AF610CA1D9A94C000143E11 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A785F6F1DA4186400B53898 /* ExternalAccessory.framework in Frameworks */,
+				4AF610CB1D9A94C000143E11 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A785F6D1DA4186400B53898 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A785F6E1DA4186400B53898 /* ExternalAccessory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4AF610901D9A947C00143E11 = {
 			isa = PBXGroup;
 			children = (
+				4AF610CA1D9A94C000143E11 /* CoreBluetooth.framework */,
 				4AF6109B1D9A947C00143E11 /* ble test */,
 				4AF610B01D9A947D00143E11 /* ble testTests */,
 				4AF610BB1D9A947D00143E11 /* ble testUITests */,
 				4AF6109A1D9A947C00143E11 /* Products */,
+				4A785F6D1DA4186400B53898 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +114,7 @@
 		4AF6109B1D9A947C00143E11 /* ble test */ = {
 			isa = PBXGroup;
 			children = (
+				4A785F701DA4186400B53898 /* ble test.entitlements */,
 				4AF6109C1D9A947C00143E11 /* AppDelegate.swift */,
 				4AF6109E1D9A947C00143E11 /* ViewController.swift */,
 				4AF610A01D9A947C00143E11 /* Main.storyboard */,
@@ -188,18 +206,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = oshitahayato;
 				TargetAttributes = {
 					4AF610981D9A947C00143E11 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6Y3S6RLA4Y;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 1;
+							};
+						};
 					};
 					4AF610AC1D9A947D00143E11 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4AF610981D9A947C00143E11;
 					};
 					4AF610B71D9A947D00143E11 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 4AF610981D9A947C00143E11;
 					};
 				};
@@ -326,8 +353,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -372,8 +401,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -392,6 +423,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -401,10 +433,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ble test/ble test.entitlements";
+				DEVELOPMENT_TEAM = 6Y3S6RLA4Y;
 				INFOPLIST_FILE = "ble test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -412,10 +447,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "ble test/ble test.entitlements";
+				DEVELOPMENT_TEAM = 6Y3S6RLA4Y;
 				INFOPLIST_FILE = "ble test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -427,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ble test.app/ble test";
 			};
 			name = Debug;
@@ -439,6 +478,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ble test.app/ble test";
 			};
 			name = Release;
@@ -450,6 +490,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ble test";
 			};
 			name = Debug;
@@ -461,6 +502,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "ble test";
 			};
 			name = Release;
@@ -484,6 +526,7 @@
 				4AF610C31D9A947D00143E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AF610C41D9A947D00143E11 /* Build configuration list for PBXNativeTarget "ble testTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +535,7 @@
 				4AF610C61D9A947D00143E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4AF610C71D9A947D00143E11 /* Build configuration list for PBXNativeTarget "ble testUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +544,7 @@
 				4AF610C91D9A947D00143E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
