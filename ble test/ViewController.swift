@@ -242,7 +242,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		print("読み出し成功 value: \(value) ")
 		
 		//型を調べるため
-		//sprint(type(of: characteristic.value!))
+		//print(type(of: characteristic.value!))
 		
 	}
 	
