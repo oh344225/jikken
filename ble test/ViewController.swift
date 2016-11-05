@@ -168,6 +168,8 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		//サービス探索開始
 		peripheral.discoverServices(nil)
 		
+		
+		
 	
 		
 	}
@@ -181,7 +183,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 	func peripheral(_ peripheral: CBPeripheral!, didDiscoverServices error: NSError!){
 		
 		let services: NSArray = peripheral.services! as NSArray
-		print("\(services.count) 個のサービスを発見! \(services)")
+		//print("\(services.count) 個のサービスを発見! \(services)")
 	
 		for obj in services{
 			
@@ -195,33 +197,58 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 	}
 	
 	//キャラクタリスティック探索結果取得,キャラクタリスティック発見時
-	func peripheral(_ peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!){
+	func peripheral(_ peripheral: CBPeripheral!, didDiscoverCharacteristicsFor service: CBService!, error: Error!){
 		
 		let characteristics: NSArray = service.characteristics! as NSArray
-		//print("\(characteristics.count)個のキャラクタリスティックを発見! \(characteristics)")
+		print("\(characteristics.count)個のキャラクタリスティックを発見! \(characteristics)")
 		
 		for obj in characteristics{
 			
 		//print("oh")
 		if let characteristic = obj as? CBCharacteristic {
+			
+			
 			//Read専用のキャラクタリスティックに限定して読み出し
 			if characteristic.properties == CBCharacteristicProperties.read{
 				
-				peripheral.readValue(for: characteristic)
+				peripheral.readValue( for: characteristic)
 				
-				//print("okkkkkk")
+				print("okkkkkk")
 			    }
 			
+			//データ更新通知の受取を開始
+			peripheral.setNotifyValue(true, for: characteristic)
+
 			}
 		}
 	}
+	
 	//探索結果表示
 	func peripheral(_ peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!){
-		print("読み出し成功! setvice uuid: \(characteristic.service.uuid), characteristic uuid: \(characteristic.uuid), value: \(characteristic.value)")
+		//print("読み出し成功! setvice uuid: \(characteristic.service.uuid), characteristic uuid: \(characteristic.uuid), value: \(characteristic.value)")
+		
+		
+		//optionalからの取り出し
+		var value : CUnsignedChar = 0
+		//var value : Data = characteristic.value!
+		//print(value)
+		//let reportdata = UnsafePointer<UInt8>(value.bytes)
+		
+		//
+		characteristic.value?.copyBytes(to: &value, count: 1)
+		
+		
+		
+		print("読み出し成功 value: \(value) ")
+		
+		//型を調べるため
+		//sprint(type(of: characteristic.value!))
 		
 	}
+	
 	//探索結果更新
 	 func peripheral(_ peripheral: CBPeripheral!, didUpdateNotficationStateForCharacteristic characteristic: CBCharacteristic!,error: NSError!){
+		
 		
 		if error != nil{
 			print("Notify状態更新失敗..error: \(error)")
@@ -229,14 +256,19 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		else{
 			print("okkk")
 			print("Notify状態更新成功 isNotifying: \(characteristic.isNotifying)")
+			
+			
+			
+			//print("データ更新! characteristic uuid: \(characteristic.uuid), value: \(characteristic.value) ")
 		}
 	}
-	/*
-    
-	func peripheral(_ peripheral: CBPeripheral!,didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!){
+	
+/*	func peripheral(_ peripheral: CBPeripheral!,didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!){
 		print("データ更新! characteristic uuid: \(characteristic.uuid), value: \(characteristic.value) ")
 		
 	}
 */
+	
+	
 	
 	}
