@@ -234,7 +234,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		//print(value)
 		//let reportdata = UnsafePointer<UInt8>(value.bytes)
 		
-		//
+		//valueのoptical型から取り出す
 		characteristic.value?.copyBytes(to: &value, count: 1)
 		
 		
