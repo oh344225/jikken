@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4A785F6F1DA4186400B53898 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A785F6E1DA4186400B53898 /* ExternalAccessory.framework */; };
+		4A978D651DE5B62D0036ED0D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A978D641DE5B62D0036ED0D /* ImageIO.framework */; };
+		4A978D671DE5B6950036ED0D /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A978D661DE5B6950036ED0D /* Photos.framework */; };
+		4A978D691DE6F59B0036ED0D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A978D681DE6F59B0036ED0D /* MobileCoreServices.framework */; };
+		4AE5E08C1DE4413F00D80959 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5E08B1DE4413F00D80959 /* CameraView.swift */; };
 		4AF6109D1D9A947C00143E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6109C1D9A947C00143E11 /* AppDelegate.swift */; };
 		4AF6109F1D9A947C00143E11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF6109E1D9A947C00143E11 /* ViewController.swift */; };
 		4AF610A21D9A947C00143E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF610A01D9A947C00143E11 /* Main.storyboard */; };
@@ -38,6 +42,11 @@
 /* Begin PBXFileReference section */
 		4A785F6E1DA4186400B53898 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		4A785F701DA4186400B53898 /* ble test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ble test.entitlements"; sourceTree = "<group>"; };
+		4A978D621DE5B6230036ED0D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4A978D641DE5B62D0036ED0D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		4A978D661DE5B6950036ED0D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		4A978D681DE6F59B0036ED0D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4AE5E08B1DE4413F00D80959 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		4AF610991D9A947C00143E11 /* ble test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ble test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF6109C1D9A947C00143E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF6109E1D9A947C00143E11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A978D691DE6F59B0036ED0D /* MobileCoreServices.framework in Frameworks */,
+				4A978D671DE5B6950036ED0D /* Photos.framework in Frameworks */,
+				4A978D651DE5B62D0036ED0D /* ImageIO.framework in Frameworks */,
 				4A785F6F1DA4186400B53898 /* ExternalAccessory.framework in Frameworks */,
 				4AF610CB1D9A94C000143E11 /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -84,6 +96,10 @@
 		4A785F6D1DA4186400B53898 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A978D681DE6F59B0036ED0D /* MobileCoreServices.framework */,
+				4A978D661DE5B6950036ED0D /* Photos.framework */,
+				4A978D641DE5B62D0036ED0D /* ImageIO.framework */,
+				4A978D621DE5B6230036ED0D /* AssetsLibrary.framework */,
 				4A785F6E1DA4186400B53898 /* ExternalAccessory.framework */,
 			);
 			name = Frameworks;
@@ -117,6 +133,7 @@
 				4A785F701DA4186400B53898 /* ble test.entitlements */,
 				4AF6109C1D9A947C00143E11 /* AppDelegate.swift */,
 				4AF6109E1D9A947C00143E11 /* ViewController.swift */,
+				4AE5E08B1DE4413F00D80959 /* CameraView.swift */,
 				4AF610A01D9A947C00143E11 /* Main.storyboard */,
 				4AF610A31D9A947C00143E11 /* Assets.xcassets */,
 				4AF610A51D9A947C00143E11 /* LaunchScreen.storyboard */,
@@ -211,8 +228,9 @@
 				TargetAttributes = {
 					4AF610981D9A947C00143E11 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6Y3S6RLA4Y;
+						DevelopmentTeam = LP4P63WJX3;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.WAC = {
 								enabled = 1;
@@ -283,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE5E08C1DE4413F00D80959 /* CameraView.swift in Sources */,
 				4AF6109F1D9A947C00143E11 /* ViewController.swift in Sources */,
 				4AF6109D1D9A947C00143E11 /* AppDelegate.swift in Sources */,
 			);
@@ -434,12 +453,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ble test/ble test.entitlements";
-				DEVELOPMENT_TEAM = 6Y3S6RLA4Y;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LP4P63WJX3;
 				INFOPLIST_FILE = "ble test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-test.344225";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -448,12 +469,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "ble test/ble test.entitlements";
-				DEVELOPMENT_TEAM = 6Y3S6RLA4Y;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = LP4P63WJX3;
 				INFOPLIST_FILE = "ble test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-test";
+				PRODUCT_BUNDLE_IDENTIFIER = "oh.ble-test.344225";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

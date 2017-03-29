@@ -5,12 +5,17 @@
 //  Created by oshitahayato on 2016/09/27.
 //  Copyright © 2016年 oshitahayato. All rights reserved.
 //
-
 import UIKit
 import CoreBluetooth
 
 class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSource, CBCentralManagerDelegate,CBPeripheralDelegate
 {
+	
+	//配列pulseサンプリング
+	var samplepulse = Array(repeating: 0, count: 100)
+	var samplecount = 0
+	var ok = 0
+	
 	
 	//ble 配列
 	private var peripheralArray = [CBPeripheral]()
@@ -31,11 +36,15 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 	//接続状態　表示
 	@IBOutlet weak var peri_state: UILabel!
 	
+	//pulsedata引き渡し
+	var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+	
+	
 	//===========================================================================
 	// MARK: -- 初期化 & ビューライフサイクル --
 	//===========================================================================
 	
-
+	
 	
 	
 	override func viewDidLoad()
@@ -72,7 +81,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 	
 	
 	
-		func centralManagerDidUpdateState(_ central: CBCentralManager)
+	func centralManagerDidUpdateState(_ central: CBCentralManager)
 	{
 		switch (central.state) {
 			
@@ -111,6 +120,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		
 		
 		// 配列に追加
+		if(peripheral.name == "BLENANO"){
 		//print("ok")
 		self.peripheralArray.append(peripheral as CBPeripheral)
 		//print("\(self.peripheralArray)")
@@ -120,6 +130,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		myUuids.addObjects(from:[peripheral.identifier.uuidString])
 		//table-reload
 		myTableView.reloadData()
+		}
 	}
 	
 	
@@ -154,7 +165,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		peri_state.text = "接続中"
 		//指定したPeripheralへ接続開始
 		//print("\(peripheralArray[(indexPath as NSIndexPath).row])")
-	    self.centralManager.connect(peripheralArray[(indexPath as NSIndexPath).row], options: nil)
+		self.centralManager.connect(peripheralArray[(indexPath as NSIndexPath).row], options: nil)
 		
 	}
 	
@@ -170,7 +181,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		
 		
 		
-	
+		
 		
 	}
 	//ペリフェラルの接続に失敗した時呼ばれる
@@ -184,7 +195,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		
 		let services: NSArray = peripheral.services! as NSArray
 		//print("\(services.count) 個のサービスを発見! \(services)")
-	
+		
 		for obj in services{
 			
 			if let service = obj as? CBService{
@@ -204,21 +215,21 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		
 		for obj in characteristics{
 			
-		//print("oh")
-		if let characteristic = obj as? CBCharacteristic {
-			
-			
-			//Read専用のキャラクタリスティックに限定して読み出し
-			if characteristic.properties == CBCharacteristicProperties.read{
+			//print("oh")
+			if let characteristic = obj as? CBCharacteristic {
 				
-				peripheral.readValue( for: characteristic)
 				
-				print("okkkkkk")
-			    }
-			
-			//データ更新通知の受取を開始
-			peripheral.setNotifyValue(true, for: characteristic)
-
+				//Read専用のキャラクタリスティックに限定して読み出し
+				if characteristic.properties == CBCharacteristicProperties.read{
+					
+					peripheral.readValue( for: characteristic)
+					
+					print("okkkkkk")
+				}
+				
+				//データ更新通知の受取を開始
+				peripheral.setNotifyValue(true, for: characteristic)
+				
 			}
 		}
 	}
@@ -240,6 +251,24 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		
 		
 		print("読み出し成功 value: \(value) ")
+		//心拍　平均化
+		samplepulse[samplecount] = Int(value)
+		samplecount = samplecount + 1
+		if(samplecount == 100){
+			ok = 1
+			samplecount = 0
+		}
+		if(ok == 1){
+		    let plus = { (a: Int, b: Int) -> Int in a + b }
+			
+		    let num = samplepulse.reduce(0, plus)
+		    print(num/100)
+		    let samrate = num/100
+		    //appDelegate.pulse = samrate
+		}
+
+		appDelegate.pulse = value
+
 		
 		//型を調べるため
 		//print(type(of: characteristic.value!))
@@ -247,7 +276,7 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 	}
 	
 	//探索結果更新
-	 func peripheral(_ peripheral: CBPeripheral!, didUpdateNotficationStateForCharacteristic characteristic: CBCharacteristic!,error: NSError!){
+	func peripheral(_ peripheral: CBPeripheral!, didUpdateNotficationStateForCharacteristic characteristic: CBCharacteristic!,error: NSError!){
 		
 		
 		if error != nil{
@@ -263,12 +292,10 @@ class ViewController:UIViewController, UITableViewDelegate, UITableViewDataSourc
 		}
 	}
 	
-/*	func peripheral(_ peripheral: CBPeripheral!,didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!){
-		print("データ更新! characteristic uuid: \(characteristic.uuid), value: \(characteristic.value) ")
-		
-	}
-*/
-	
-	
+	/*	func peripheral(_ peripheral: CBPeripheral!,didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!){
+	print("データ更新! characteristic uuid: \(characteristic.uuid), value: \(characteristic.value) ")
 	
 	}
+	*/
+	
+}
