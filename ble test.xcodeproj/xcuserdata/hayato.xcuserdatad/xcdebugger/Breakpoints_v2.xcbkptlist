@@ -6,16 +6,272 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ble_test.CameraView.capture (__ObjC.AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, previewPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, resolvedSettings : __ObjC.AVCaptureResolvedPhotoSettings, bracketSettings : Swift.Optional&lt;__ObjC.AVCaptureBracketedStillImageSettings&gt;, error : Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "ble test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hayato/Desktop/%E7%A0%94%E7%A9%B6swift/ble%20test/ble%20test/CameraView.swift"
+                  timestampString = "502121537.060456"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "4740">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ble_test.CameraView.(capture (__ObjC.AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, previewPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, resolvedSettings : __ObjC.AVCaptureResolvedPhotoSettings, bracketSettings : Swift.Optional&lt;__ObjC.AVCaptureBracketedStillImageSettings&gt;, error : Swift.Optional&lt;Swift.Error&gt;) -&gt; ()).(closure #2)"
+                  moduleName = "ble test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hayato/Desktop/%E7%A0%94%E7%A9%B6swift/ble%20test/ble%20test/CameraView.swift"
+                  timestampString = "502121537.068745"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ble test/ViewController.swift"
-            timestampString = "500018334.137117"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "peripheral(_:didUpdateValueForCharacteristic:error:)"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "addNewAssetImage(with:withpath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "addNewAssetImage(with:withpath:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ble_test.CameraView.capture (__ObjC.AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, previewPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, resolvedSettings : __ObjC.AVCaptureResolvedPhotoSettings, bracketSettings : Swift.Optional&lt;__ObjC.AVCaptureBracketedStillImageSettings&gt;, error : Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "ble test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hayato/Desktop/%E7%A0%94%E7%A9%B6swift/ble%20test/ble%20test/CameraView.swift"
+                  timestampString = "503394761.928505"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "239"
+                  endingLineNumber = "239"
+                  offsetFromSymbolStart = "3728">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ble_test.CameraView.(capture (__ObjC.AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, previewPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, resolvedSettings : __ObjC.AVCaptureResolvedPhotoSettings, bracketSettings : Swift.Optional&lt;__ObjC.AVCaptureBracketedStillImageSettings&gt;, error : Swift.Optional&lt;Swift.Error&gt;) -&gt; ()).(closure #2)"
+                  moduleName = "ble test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hayato/Desktop/%E7%A0%94%E7%A9%B6swift/ble%20test/ble%20test/CameraView.swift"
+                  timestampString = "503394761.930758"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "239"
+                  endingLineNumber = "239"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ble_test.CameraView.capture (__ObjC.AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, previewPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, resolvedSettings : __ObjC.AVCaptureResolvedPhotoSettings, bracketSettings : Swift.Optional&lt;__ObjC.AVCaptureBracketedStillImageSettings&gt;, error : Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "ble test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hayato/Desktop/%E7%A0%94%E7%A9%B6swift/ble%20test/ble%20test/CameraView.swift"
+                  timestampString = "502201555.000235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "4632">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ble_test.CameraView.(capture (__ObjC.AVCapturePhotoOutput, didFinishProcessingPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, previewPhotoSampleBuffer : Swift.Optional&lt;__ObjC.CMSampleBuffer&gt;, resolvedSettings : __ObjC.AVCaptureResolvedPhotoSettings, bracketSettings : Swift.Optional&lt;__ObjC.AVCaptureBracketedStillImageSettings&gt;, error : Swift.Optional&lt;Swift.Error&gt;) -&gt; ()).(closure #2)"
+                  moduleName = "ble test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hayato/Desktop/%E7%A0%94%E7%A9%B6swift/ble%20test/ble%20test/CameraView.swift"
+                  timestampString = "502201555.006075"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "208">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ble test/CameraView.swift"
+            timestampString = "509104894.688121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "capture(_:didFinishProcessingPhotoSampleBuffer:previewPhotoSampleBuffer:resolvedSettings:bracketSettings:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
